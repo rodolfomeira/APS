@@ -1,0 +1,275 @@
+@font-face {
+  font-family: freeman;
+  src: url(../fontes/Freeman-Regular.ttf);
+}
+
+*{
+	margin: 0; /* eliminar margem padrão */
+	padding: 0; /* eliminar padding padrão */
+}
+
+/* Estilos para o corpo */
+body {
+  font-family: freeman; /* Define a família de fontes para o corpo */
+}
+
+body::before {
+  content: " ";
+  position: fixed;
+  width: 110%;
+  height: 110%;
+  opacity: 0.3;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(../imagens/imagem-de-fundo.png);
+}
+
+
+h1, h2, h3, h4, p {
+  display: flex; /* Torna os links de navegação um contêiner flexível */
+  justify-content: center;
+  align-items: center;
+  font-family: freeman;
+  margin: 20px;
+} 
+
+h1, h2, h4 {
+  color: #1a226d;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+}
+
+p {
+  font-family: freeman;
+  font-size: 1.3rem;
+  text-align: left;
+
+
+}
+
+a {
+  font-family: freeman;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+/* Estilos para a navegação superior */
+.menuPrincipal {
+  overflow: hidden; /* Garante que o conteúdo que transborda seja ocultado */
+  background-color: #4756db; /* Define a cor de fundo da barra de navegação */
+}
+
+.menuPrincipal a {
+  float: left; /* Faz com que os itens de navegação fiquem lado a lado */
+  display: block; /* Transforma os links em elementos de bloco */
+  color: #f2f2f2; /* Define a cor do texto dos links */
+  text-align: center; /* Centraliza o texto dos links */
+  padding: 14px 16px; /* Define o espaçamento interno dos links */
+  text-decoration: none; /* Remove a decoração dos links */
+  font-size: 17px; /* Define o tamanho da fonte dos links */
+}
+
+a:hover {
+  background-color: #dceb14; /* Define a cor de fundo quando o mouse passa por cima dos links */
+  ; /* Define a cor de fundo quando o mouse passa por cima dos links */
+  color: #1a226d; /* Define a cor do texto quando o mouse passa por cima dos links */
+}
+
+a.pgAtual {
+  background-color: #1a226d; /* Define a cor de fundo do link ativo */
+  color: white; /* Define a cor do texto do link ativo */
+}
+
+.menuPrincipal .icone {
+  display: none; /* Esconde o ícone de navegação em telas maiores */
+}
+
+/* Estilos para tornar a navegação responsiva em telas pequenas */
+@media screen and (max-width: 600px) {
+  .menuPrincipal a:not(:first-child) {
+    display: none; /* Esconde todos os links, exceto o primeiro, em telas pequenas */
+  }
+  .menuPrincipal a.icone {
+    float: right; /* Alinha o ícone de navegação à direita */
+    display: block; /* Exibe o ícone de navegação */
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .menuPrincipal.responsivo {
+    position: relative; /* Define a posição relativa para a barra de navegação responsiva */
+  }
+  .menuPrincipal.responsivo .icone{
+    position: absolute; /* Define a posição absoluta para o ícone de navegação responsivo */
+    right: 0; /* Alinha o ícone de navegação responsivo à direita */
+    top: 0; /* Alinha o ícone de navegação responsivo ao topo */
+  }
+  .menuPrincipal.responsivo a {
+    float: none; /* Remove o alinhamento flutuante dos links */
+    display: block; /* Transforma os links em elementos de bloco */
+    text-align: left; /* Alinha o texto dos links à esquerda */
+  }
+}
+
+.lixo-eletronico{
+  margin: auto;
+  display: block;
+  width: 30%;
+}
+
+/* Estilos CSS para o menu horizontal com rolagem */
+.menuSegundario {
+  background-color: #4756db; /* Define a cor de fundo do menu com rolagem */
+  overflow: auto; /* Habilita a rolagem do conteúdo que transborda */
+  white-space: nowrap; /* Impede que o conteúdo seja quebrado em várias linhas */
+}
+
+.menuSegundario a {
+  display: inline-block; /* Transforma os links em elementos de bloco inline */
+  color: white; /* Define a cor do texto dos links */
+  text-align: center; /* Centraliza o texto dos links */
+  padding: 14px; /* Define o espaçamento interno dos links */
+  text-decoration: none; /* Remove a decoração dos links */
+}
+
+
+/* Estilos CSS para avatares */
+.iconePerfil  {
+  vertical-align: middle;
+  width: 7em; /* Define a largura dos avatares */
+  height: 7rem; /* Define a altura dos avatares */
+  border-radius: 50%; /* Define um raio de borda para criar avatares circulares */
+  margin-right: 1rem;
+
+}
+
+
+/*Estilo para o botão*/
+#btModoEscuro{
+  width: 3em; 
+  height: 3rem; 
+  border: solid 3px #1a226d; /*Cor e grossura da borda do botão*/
+  border-radius: 50%; /*Curvatura do botão*/
+  background-color: white; /*Cor do fundo do botão*/
+  margin: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;/*Tempo de atraso para quando for colocado o mouse em cima, para mudar de cor*/
+}
+
+.contato{
+
+  padding: 2rem; /* Preenchimento interno */
+  text-align: center; /* Alinhamento do texto ao centro */
+  justify-content: space-around; /* Distribui os links igualmente ao longo do espaço disponível */
+  
+}
+
+/*Estilo do botão enquanto o mouse estiver em cima*/
+#btModoEscuro:hover{
+  transform: scale(1.2); /*quando colocar o mouse em cima o botão aumenta*/
+}
+
+
+#ImagemBtModoEscuro {
+  width: 2em;
+  height: 2rem;
+}
+
+.sobrenos, .referencia, .contato {
+	width: auto;
+
+}
+
+
+/* Estilos CSS para galeria de imagens com rolagem horizontal */
+.menuSegundario-container {
+  background-color: #4756db; /* Define a cor de fundo da galeria de imagens */
+  overflow: auto; /* Habilita a rolagem do conteúdo que transborda */
+  white-space: nowrap; /* Impede que o conteúdo seja quebrado em várias linhas */
+  padding: 10px; /* Define o espaçamento interno da galeria de imagens */
+}
+
+.menuSegundario-container img {
+  padding: 10px; /* Define o espaçamento interno das imagens na galeria */
+}
+
+footer  {
+  background-color:  #4756db; /* Define a cor de fundo do cabeçalho e rodapé como cinza escuro */
+  color: #fff; /* Define a cor do texto do cabeçalho e rodapé como branco */
+  width: 100%; /* Largura total */
+  bottom: 0; /* Alinha ao final da página */
+  padding: 1rem; /* Preenchimento interno */
+  text-align: center; /* Alinhamento do texto ao centro */
+  font-family: "impact"; /* Fonte */
+  font-size: 16pt; /* Tamanho do texto */
+  display: flex; /* Torna os links de navegação um contêiner flexível */
+  justify-content: space-around; /* Distribui os links igualmente ao longo do espaço disponível */
+  list-style-type: none; /* Remove os marcadores de lista dos links de navegação */
+}
+
+
+
+.rodape, .alunos { /*Criar o container para as <divs>*/
+	width: 100%;
+	display: grid; /* para os elementos se compararem como tabela*/
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+	/*Fazendo com que os elementos internos dividam o espaço, crescendo ou diminuindo*/
+	/*fr= fração do espaço disponível no container do grid.*/
+	/* minmax(). É uma função permitindo setar valores, que inclui um valor mínimo e máximo.*/
+    
+	grid-gap: 0.5em; /*Define os espações (glutters) entre linhas e colunas*/
+	margin-bottom: 50px; /* altera tamanho da margen */
+	/* inferior aqui serve para liberar espaço para exibir o rodapé que tem posição fixa */
+}
+
+/* Estilos para o tema escuro */ 
+.dark-mode {
+  background-color: rgb(34, 34, 34); /* Define a cor de fundo do modo escuro como preto */
+  color: rgb(255, 255, 255); /* Define a cor do texto no modo escuro como branco */
+}
+
+.quadro {
+  position: relative;
+  width: 50%;
+  
+}
+
+.imagemPerfil {
+  display: block;
+  width: 20rem;
+  height: 20em;
+
+}
+
+.transicao {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 20rem;
+  height: 20em;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #1a226d;
+}
+
+.quadro:hover .transicao {
+  opacity: 1;
+}
+
+.nomeAluno {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
