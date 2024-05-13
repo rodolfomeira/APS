@@ -1,11 +1,11 @@
 @font-face {
-  font-family: freeman;
-  src: url(../fontes/Freeman-Regular.ttf);
+  font-family: freeman; /* Define a fonte personalizada chamada "freeman" */
+  src: url(../fontes/Freeman-Regular.ttf); /* Especifica o caminho da fonte */
 }
 
-*{
-	margin: 0; /* eliminar margem padrão */
-	padding: 0; /* eliminar padding padrão */
+* {
+  margin: 0; /* Elimina margens padrão para todos os elementos */
+  padding: 0; /* Elimina padding padrão para todos os elementos */
 }
 
 /* Estilos para o corpo */
@@ -14,78 +14,88 @@ body {
 }
 
 body::before {
-  content: " ";
-  position: fixed;
-  width: 110%;
-  height: 110%;
-  opacity: 0.3;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-image: url(../imagens/imagem-de-fundo.png);
+  content: " "; /* Adiciona um conteúdo vazio antes do corpo */
+  position: fixed; /* Posiciona de forma fixa */
+  width: 100%; /* Largura 100% do viewport */
+  height: 100%; /* Altura 100% do viewport */
+  opacity: 0.3; /* Opacidade de 0.3 */
+  z-index: -1; /* Z-index -1 para colocar atrás de outros elementos */
+  background-size: 100%; /* Tamanho do fundo 100% */
+  background-image: url(../imagens/imagem-de-fundo.png); /* Imagem de fundo */
 }
 
-
+/* Estilos para cabeçalhos e parágrafos */
 h1, h2, h3, h4, p {
-  display: flex; /* Torna os links de navegação um contêiner flexível */
-  justify-content: center;
-  align-items: center;
-  font-family: freeman;
-  margin: 20px;
+  display: flex; /* Torna os cabeçalhos e parágrafos contêineres flexíveis */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  font-family: freeman; /* Define a família de fontes */
+  margin: 20px; /* Margem de 20px para todos os lados */
 } 
 
+/* Estilo específico para h6 */
+h6 {
+  margin: 20px; /* Margem de 20px */
+}
+
+/* Estilos de cor para cabeçalhos */
 h1, h2, h4 {
-  color: #1a226d;
+  color: #1a226d; /* Cor azul escura */
 }
 
+/* Estilos de cor para h3 */
 h3 {
-  color: rgb(255, 255, 255);
-  font-weight: 100;
+  color: rgb(255, 255, 255); /* Cor branca */
+  font-weight: 100; /* Peso da fonte 100 */
 }
 
+/* Estilos para parágrafos */
 p {
-  font-family: freeman;
-  font-size: 1.3rem;
-  text-align: left;
-
-
+  font-family: freeman; /* Define a família de fontes */
+  font-size: 1.3rem; /* Tamanho da fonte */
+  text-align: left; /* Alinhamento à esquerda */
 }
 
+/* Estilos para links */
 a {
-  font-family: freeman;
-  font-size: 1.3rem;
-  font-weight: 100;
+  font-family: freeman; /* Define a família de fontes */
+  font-size: 1.3rem; /* Tamanho da fonte */
+  font-weight: 100; /* Peso da fonte 100 */
 }
 
 /* Estilos para a navegação superior */
 .menuPrincipal {
-  overflow: hidden; /* Garante que o conteúdo que transborda seja ocultado */
-  background-color: #4756db; /* Define a cor de fundo da barra de navegação */
+  overflow: hidden; /* Esconde o conteúdo que transborda */
+  background-color: #4756db; /* Cor de fundo */
 }
 
+/* Estilos para os itens de navegação */
 .menuPrincipal a {
-  float: left; /* Faz com que os itens de navegação fiquem lado a lado */
+  float: left; /* Alinha os itens à esquerda */
   display: block; /* Transforma os links em elementos de bloco */
-  color: #f2f2f2; /* Define a cor do texto dos links */
-  text-align: center; /* Centraliza o texto dos links */
-  padding: 14px 16px; /* Define o espaçamento interno dos links */
-  text-decoration: none; /* Remove a decoração dos links */
-  font-size: 17px; /* Define o tamanho da fonte dos links */
+  color: #f2f2f2; /* Cor do texto */
+  text-align: center; /* Alinhamento do texto */
+  padding: 14px 16px; /* Espaçamento interno */
+  text-decoration: none; /* Remove a decoração */
+  font-size: 17px; /* Tamanho da fonte */
 }
 
+/* Estilos de hover para links */
 a:hover {
-  background-color: #dceb14; /* Define a cor de fundo quando o mouse passa por cima dos links */
-  ; /* Define a cor de fundo quando o mouse passa por cima dos links */
-  color: #1a226d; /* Define a cor do texto quando o mouse passa por cima dos links */
+  background-color: #dceb14; /* Cor de fundo ao passar o mouse */
+  ;
+  color: #1a226d; /* Cor do texto ao passar o mouse */
 }
 
+/* Estilo para link da página atual */
 a.pgAtual {
-  background-color: #1a226d; /* Define a cor de fundo do link ativo */
-  color: white; /* Define a cor do texto do link ativo */
+  background-color: #1a226d; /* Cor de fundo do link ativo */
+  color: white; /* Cor do texto do link ativo */
 }
 
+/* Estilos para o ícone de navegação */
 .menuPrincipal .icone {
-  display: none; /* Esconde o ícone de navegação em telas maiores */
+  display: none; /* Esconde o ícone de navegação */
 }
 
 /* Estilos para tornar a navegação responsiva em telas pequenas */
@@ -116,48 +126,47 @@ a.pgAtual {
   }
 }
 
+/* Estilos para o ícone de lixo eletrônico */
 .lixo-eletronico{
-  margin: auto;
-  display: block;
-  width: 30%;
+  margin: auto; /* Margem automática */
+  display: block; /* Transforma em bloco */
+  width: 30%; /* Largura de 30% */
 }
 
 /* Estilos CSS para o menu horizontal com rolagem */
 .menuSegundario {
-  background-color: #4756db; /* Define a cor de fundo do menu com rolagem */
-  overflow: auto; /* Habilita a rolagem do conteúdo que transborda */
-  white-space: nowrap; /* Impede que o conteúdo seja quebrado em várias linhas */
+  background-color: #4756db; /* Cor de fundo */
+  overflow: auto; /* Habilita a rolagem */
+  white-space: nowrap; /* Impede quebrar em várias linhas */
 }
 
+/* Estilos para os itens do menu horizontal */
 .menuSegundario a {
   display: inline-block; /* Transforma os links em elementos de bloco inline */
-  color: white; /* Define a cor do texto dos links */
-  text-align: center; /* Centraliza o texto dos links */
-  padding: 14px; /* Define o espaçamento interno dos links */
-  text-decoration: none; /* Remove a decoração dos links */
+  color: white; /* Cor do texto */
+  text-align: center; /* Alinhamento do texto */
+  padding: 14px; /* Espaçamento interno */
+  text-decoration: none; /* Remove a decoração */
 }
 
-
-/* Estilos CSS para avatares */
+/* Estilos para avatares */
 .iconePerfil  {
-  vertical-align: middle;
-  width: 7em; /* Define a largura dos avatares */
-  height: 7rem; /* Define a altura dos avatares */
-  border-radius: 50%; /* Define um raio de borda para criar avatares circulares */
-  margin-right: 1rem;
-
+  vertical-align: middle; /* Alinhamento vertical */
+  width: 7em; /* Largura */
+  height: 7rem; /* Altura */
+  border-radius: 50%; /* Borda circular */
+  margin-right: 1rem; /* Margem direita */
 }
 
-
-/*Estilo para o botão*/
+/* Estilos para o botão */
 #btModoEscuro{
-  width: 3em; 
-  height: 3rem; 
-  border: solid 3px #1a226d; /*Cor e grossura da borda do botão*/
-  border-radius: 50%; /*Curvatura do botão*/
-  background-color: white; /*Cor do fundo do botão*/
-  margin: 20px;
-  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;/*Tempo de atraso para quando for colocado o mouse em cima, para mudar de cor*/
+  width: 3em; /* Largura */
+  height: 3rem; /* Altura */
+  border: solid 3px #1a226d; /* Cor e grossura da borda */
+  border-radius: 50%; /* Borda circular */
+  background-color: white; /* Cor de fundo */
+  margin: 20px; /* Margem */
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease; /* Transições */
 }
 
 .contato{
@@ -168,62 +177,58 @@ a.pgAtual {
   
 }
 
-/*Estilo do botão enquanto o mouse estiver em cima*/
+
+/* Estilo do botão ao passar o mouse */
 #btModoEscuro:hover{
-  transform: scale(1.2); /*quando colocar o mouse em cima o botão aumenta*/
+  transform: scale(1.2); /* Aumenta a escala */
 }
 
-
+/* Estilos para a imagem do botão */
 #ImagemBtModoEscuro {
-  width: 2em;
-  height: 2rem;
+  width: 2em; /* Largura */
+  height: 2rem; /* Altura */
 }
 
+/* Estilos para as seções sobrenós, referencia, contato */
 .sobrenos, .referencia, .contato {
-	width: auto;
-
+  width: auto; /* Largura automática */
 }
-
 
 /* Estilos CSS para galeria de imagens com rolagem horizontal */
 .menuSegundario-container {
-  background-color: #4756db; /* Define a cor de fundo da galeria de imagens */
-  overflow: auto; /* Habilita a rolagem do conteúdo que transborda */
-  white-space: nowrap; /* Impede que o conteúdo seja quebrado em várias linhas */
-  padding: 10px; /* Define o espaçamento interno da galeria de imagens */
+  background-color: #4756db; /* Cor de fundo */
+  overflow: auto; /* Habilita a rolagem */
+  white-space: nowrap; /* Impede quebrar em várias linhas */
+  padding: 10px; /* Espaçamento interno */
 }
 
+/* Estilos para as imagens na galeria */
 .menuSegundario-container img {
-  padding: 10px; /* Define o espaçamento interno das imagens na galeria */
+  padding: 10px; /* Espaçamento interno */
 }
 
+/* Estilos para o rodapé */
 footer  {
-  background-color:  #4756db; /* Define a cor de fundo do cabeçalho e rodapé como cinza escuro */
-  color: #fff; /* Define a cor do texto do cabeçalho e rodapé como branco */
+  background-color:  #4756db; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
   width: 100%; /* Largura total */
-  bottom: 0; /* Alinha ao final da página */
-  padding: 1rem; /* Preenchimento interno */
-  text-align: center; /* Alinhamento do texto ao centro */
+  bottom: 0; /* Alinhamento ao final da página */
+  padding: 1rem; /* Espaçamento interno */
+  text-align: center; /* Alinhamento do texto */
   font-family: "impact"; /* Fonte */
-  font-size: 16pt; /* Tamanho do texto */
-  display: flex; /* Torna os links de navegação um contêiner flexível */
-  justify-content: space-around; /* Distribui os links igualmente ao longo do espaço disponível */
-  list-style-type: none; /* Remove os marcadores de lista dos links de navegação */
+  font-size: 16pt; /* Tamanho da fonte */
+  display: flex; /* Torna os links um contêiner flexível */
+  justify-content: space-around; /* Distribui igualmente */
+  list-style-type: none; /* Remove marcadores de lista */
 }
 
-
-
-.rodape, .alunos { /*Criar o container para as <divs>*/
-	width: 100%;
-	display: grid; /* para os elementos se compararem como tabela*/
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-	/*Fazendo com que os elementos internos dividam o espaço, crescendo ou diminuindo*/
-	/*fr= fração do espaço disponível no container do grid.*/
-	/* minmax(). É uma função permitindo setar valores, que inclui um valor mínimo e máximo.*/
-    
-	grid-gap: 0.5em; /*Define os espações (glutters) entre linhas e colunas*/
-	margin-bottom: 50px; /* altera tamanho da margen */
-	/* inferior aqui serve para liberar espaço para exibir o rodapé que tem posição fixa */
+/* Estilos para o rodapé e a seção de alunos */
+.rodape, .alunos {
+  width: 100%; /* Largura total */
+  display: grid; /* Exibe como grid */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Define as colunas */
+  grid-gap: 0.5em; /* Espaçamento entre linhas e colunas */
+  margin-bottom: 50px; /* Margem inferior */
 }
 
 /* Estilos para o tema escuro */ 
@@ -232,44 +237,47 @@ footer  {
   color: rgb(255, 255, 255); /* Define a cor do texto no modo escuro como branco */
 }
 
+/* Define o estilo para o elemento com a classe 'quadro' */
 .quadro {
-  position: relative;
-  width: 50%;
-  
+  position: relative; /* Define a posição relativa para facilitar o posicionamento absoluto dos elementos filhos */
+  width: 50%; /* Define a largura do quadro como 50% do seu contêiner pai */
 }
 
+/* Define o estilo para as imagens dentro do quadro */
 .imagemPerfil {
-  display: block;
-  width: 20rem;
-  height: 20em;
-
+  display: block; /* Define a exibição do elemento como bloco para ocupar toda a largura disponível */
+  width: 20rem; /* Define a largura da imagem */
+  height: 20em; /* Define a altura da imagem */
 }
 
+/* Define o estilo para a transição de fundo */
 .transicao {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 20rem;
-  height: 20em;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #1a226d;
+  position: absolute; /* Define a posição absoluta para que possa ser sobreposta ao elemento pai */
+  top: 0; /* Alinha o topo da transição com o topo do elemento pai */
+  bottom: 0; /* Alinha o fundo da transição com o fundo do elemento pai */
+  left: 0; /* Alinha a esquerda da transição com a esquerda do elemento pai */
+  right: 0; /* Alinha a direita da transição com a direita do elemento pai */
+  width: 20rem; /* Define a largura da transição */
+  height: 20em; /* Define a altura da transição */
+  opacity: 0; /* Define a opacidade inicial como 0 para torná-la invisível */
+  transition: .5s ease; /* Define a transição de opacidade com duração de 0.5 segundos e uma curva de aceleração suave */
+  background-color: #1a226d; /* Define a cor de fundo da transição */
 }
 
+/* Define o estilo para a transição de opacidade quando o mouse passa sobre o elemento pai */
 .quadro:hover .transicao {
-  opacity: 1;
+  opacity: 1; /* Define a opacidade como 1 quando o mouse está sobre o elemento pai */
 }
 
+/* Define o estilo para o nome do aluno sobreposto à imagem */
 .nomeAluno {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+  color: white; /* Define a cor do texto como branca */
+  font-size: 20px; /* Define o tamanho da fonte como 20 pixels */
+  position: absolute; /* Define a posição absoluta para que possa ser sobreposta ao elemento pai */
+  top: 50%; /* Alinha o topo do nome do aluno ao centro vertical do elemento pai */
+  left: 50%; /* Alinha a esquerda do nome do aluno ao centro horizontal do elemento pai */
+  -webkit-transform: translate(-50%, -50%); /* Move o elemento 50% para a esquerda e 50% para cima, para centralizá-lo */
+  -ms-transform: translate(-50%, -50%); /* Mesmo para navegadores Internet Explorer/Edge */
+  transform: translate(-50%, -50%); /* Mesmo para outros navegadores */
+  text-align: center; /* Centraliza o texto horizontalmente */
 }
